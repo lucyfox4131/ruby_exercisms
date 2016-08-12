@@ -1,6 +1,4 @@
 class Hamming
-#hamming distance is only defined when strings are of equal length
-
   def self.compute(string1, string2)
     if string1.length == string2.length
       compare_strings(string1, string2)

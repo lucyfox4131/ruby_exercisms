@@ -8,18 +8,7 @@ class Hamming
   end
 
   def self.compare_strings(string1, string2)
-    if string1 == string2
-      return 0
-    else
-      calculate_differences(string1, string2)
-    end
-  end
-
-  def self.calculate_differences(string1, string2)
-    counter = 0
-    string1.length.times do |i|
-      counter += 1 unless string1[i] == string2[i]
-    end
-    return counter
+    matched = string1.chars.zip(string2.chars)
+    matched.keep_if {|letters| letters[0] != letters[1]}.count
   end
 end

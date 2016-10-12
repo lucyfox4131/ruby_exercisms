@@ -1,5 +1,4 @@
 class Raindrops
-
   def self.convert(num)
     result = ""
     result << "Pling" if num % 3 == 0

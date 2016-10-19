@@ -1,10 +1,10 @@
 class Complement
+COMPLEMENTS = {"C" => "G", "G" => "C", "A" => "U", "T" => "A"}
 
   def self.of_dna(nucleotide)
     result = ""
     if validValue(nucleotide)
-      complements = {"C" => "G", "G" => "C", "A" => "U", "T" => "A"}
-      nucleotide.chars.each { |nuc| result << complements[nuc] }
+      nucleotide.chars.each { |nuc| result << COMPLEMENTS[nuc] }
     end
     result
   end
